@@ -7,8 +7,8 @@
 	window.ifThisChanged = function(fieldName, originalFunction) {
 
 		var field,
-				newThis,
-				newArguments;
+			newThis,
+			newArguments;
 
 		return function() {
 			newThis = this;
@@ -26,8 +26,8 @@
 			time = 20;
 		}
 		var isTimerRunning = false,
-				newThis,
-				newArguments;
+			newThis,
+			newArguments;
 
 		return function() {
 			newThis = this;
