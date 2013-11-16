@@ -7,15 +7,13 @@
 	window.ifThisChanged = function(fieldName, originalFunction) {
 
 		var field,
-			newThis,
 			newArguments;
 
 		return function() {
-			newThis = this;
 			newArguments = arguments;
-			if (field == this[fieldName]) return;
+			if (field === this[fieldName]) return;
 			field = this[fieldName];
-			return originalFunction.call(newThis, arguments);
+			return originalFunction.apply(this, arguments);
 		};
 	}
 
